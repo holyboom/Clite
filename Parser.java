@@ -84,20 +84,17 @@ public class Parser {
         // Type  -->  int | bool | float | char 
 	// look up enum in API amke sure that this is working 
 	Type t = null;
-	if(token.type().equals(TokenType.Int))
-        {   t = Type.INT;		
+	if (token.type().equals(TokenType.Int)) {
+            t = Type.INT;		
 //			System.out.println(" Type  is int");
-	}		
-	else if (token.type().equals(TokenType.Bool)) 
-	{		t = Type.BOOL;
+	} else if (token.type().equals(TokenType.Bool)) {
+			t = Type.BOOL;
 //			System.out.println(" Type  is bool");
-	}
-	else if (token.type().equals(TokenType.Float)) 
-	{		t = Type.FLOAT;
+	} else if (token.type().equals(TokenType.Float)) {
+			t = Type.FLOAT;
 //			System.out.println(" Type  is float");
-	}
-	else if (token.type().equals(TokenType.Char)) 
-	{		t = Type.CHAR;
+	} else if (token.type().equals(TokenType.Char)) {
+			t = Type.CHAR;
 //			System.out.println(" Type  is char");
 	} else error ("Error in Type construction");
 	token = lexer.next();
